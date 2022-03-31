@@ -1,0 +1,8 @@
+<div class="container">
+  <div>
+    <input type="text" [(ngModel)]="query" />
+  </div>
+  <div *ngFor="let item of users | userFilter: 'name,text':query">
+    <app-user-list-item [user]="item"></app-user-list-item>
+  </div>
+</div>
